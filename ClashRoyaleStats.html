@@ -2,23 +2,56 @@
 <head>
   <title>Clash Royale Stats</title>
   <meta charset="UTF-8">
+  <meta name="description" content="First html webpage">
+  <meta name="keywords" content="Clash ROyale">
+  <meta name="author" content="Rafa de Miguel">
+
+  <!-- The viewport is the user's visible area of a web page. It varies with the device, and will be smaller on a mobile phone than on a computer screen. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="css/myfirst.css">
+  <script>
+  function selectCard(card) {
+
+    document.getElementById("cardId").src = cardimg = "img/"+card+"Card.png";
+
+  }
+  </script>
 </head>
 <body>
   <br>
   <h1>Clash Royale Stats</h1>
   <br>
-  <img src="img/crkings.jpg" style="width:300" alt="Kings">
+  <img src="img/crkings.jpg" style="width:300px;" alt="Kings">
+
+<div class="block">
   <h2>Online Stats</h2>
     <p>You can check online statistics in the following link:</p>
     <a href="https://statsroyale.com/profile/22R2CL08/">Online Stats</a>
     <p>or jump to the Dragon
       <a href="#dragon">
-        <img src="http://clashroyalewiki-558a.kxcdn.com/wp-content/uploads/2016/03/BabyDragon.png" alt="dragon" style="float:right;width:50px">
       </a>
     </p>
+    <img src="img/BabyDragonCard.png" alt="dragon" style="float:left;width:50px">
   <br>
-  <h2>Offline Stats</h2>
+</div>
+
+<h2>Card Selector</h2>
+
+<button type="button" onclick='selectCard("BabyDragon")'>Baby Dragon</button>
+<button type="button" onclick='selectCard("Giant")'>Giant</button>
+<button type="button" onclick='selectCard("ElectroWizard")'>Electro Wizard</button>
+<button type="button" onclick='selectCard("NightWitch")'>Night Witch</button>
+<button type="button" onclick='selectCard("SkeletonArmy")'>Skeleton Army</button>
+
+<div>
+<img id="cardId" src="img/BabyDragonCard.png" alt="card not found" style="width:100px;padding:30px;">
+</div>
+
+
+
+
+<h2>Offline Stats</h2>
 
   <h3>Gold</h3>
     <p class="important">20th October : 121.735</p>
@@ -64,4 +97,4 @@
       </td>
     </tr>
   </table>
-<body>
+</body>
